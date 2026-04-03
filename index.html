@@ -72,13 +72,11 @@ header h1 span{color:#e94560}
 .c-match{background:#e94560}.c-transfer{background:#2196f3}.c-tactics{background:#ff9800}.c-interview{background:#9c27b0}.c-data{background:#4caf50}.c-league{background:#1a3a6a}
 
 /* === YOU Badge === */
-.you-badge{display:inline-block;background:linear-gradient(135deg,#ffd700,#ffaa00,#ffd700);color:#7a4800;font-size:10px;font-weight:900;padding:2px 8px;border-radius:20px;margin-left:6px;letter-spacing:.5px;vertical-align:middle;border:2px solid #c8960c;box-shadow:0 0 8px rgba(255,215,0,.5),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,255,255,.4);animation:you-glow 2s ease-in-out infinite}
-.you-badge.lg{font-size:13px;padding:4px 12px;margin-left:8px;border-width:2px}
+.you-badge-img{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#ffd700,#ffaa00,#ffd700);color:#7a4800;font-size:11px;font-weight:900;padding:5px 12px;border-radius:20px;z-index:2;letter-spacing:.5px;border:2px solid #c8960c;box-shadow:0 0 10px rgba(255,215,0,.6),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,255,255,.4);animation:you-glow 2s ease-in-out infinite}
+.you-badge-hero{position:absolute;top:14px;left:14px;background:linear-gradient(135deg,#ffd700,#f0c000,#ffaa00,#ffd700);color:#7a4800;font-size:14px;font-weight:900;padding:6px 16px;border-radius:24px;z-index:2;letter-spacing:.5px;border:3px solid #c8960c;box-shadow:0 0 14px rgba(255,215,0,.7),0 0 30px rgba(255,170,0,.3),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,255,255,.4);animation:you-glow 2s ease-in-out infinite}
 @keyframes you-glow{0%,100%{box-shadow:0 0 8px rgba(255,215,0,.5),inset 0 1px 0 rgba(255,255,255,.5)}50%{box-shadow:0 0 18px rgba(255,215,0,.8),0 0 30px rgba(255,170,0,.3),inset 0 1px 0 rgba(255,255,255,.5)}}
-.you-card{border:2px solid #ffd700;position:relative;box-shadow:0 0 12px rgba(255,215,0,.2)}
-.you-card::after{content:"★ YOU";position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#ffd700,#ffaa00,#ffd700);color:#7a4800;font-size:11px;font-weight:900;padding:5px 12px;border-radius:20px;z-index:2;letter-spacing:.5px;border:2px solid #c8960c;box-shadow:0 0 10px rgba(255,215,0,.6),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,255,255,.4);animation:you-glow 2s ease-in-out infinite}
+.you-card{border:2px solid #ffd700;box-shadow:0 0 12px rgba(255,215,0,.2)}
 .you-hero{border:3px solid #ffd700;border-radius:14px;box-shadow:0 0 16px rgba(255,215,0,.25)}
-.you-hero::after{content:"★ YOU";position:absolute;top:14px;left:14px;background:linear-gradient(135deg,#ffd700,#f0c000,#ffaa00,#ffd700);color:#7a4800;font-size:14px;font-weight:900;padding:6px 16px;border-radius:24px;z-index:2;letter-spacing:.5px;border:3px solid #c8960c;box-shadow:0 0 14px rgba(255,215,0,.7),0 0 30px rgba(255,170,0,.3),inset 0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,255,255,.4);animation:you-glow 2s ease-in-out infinite}
 .name-highlight{background:linear-gradient(transparent 60%,rgba(255,215,0,.25) 60%);font-weight:700;padding:0 2px}
 
 /* === Sidebar === */
@@ -501,25 +499,45 @@ function highlightName(text) {
   if (!playerInfo) return text;
   var name = playerInfo.name;
   var regex = new RegExp(name, "g");
-  return text.replace(regex, '<span class="name-highlight">' + name + ' <span class="you-badge">YOU</span></span>');
+  return text.replace(regex, '<span class="name-highlight">' + name + '</span>');
 }
 
 function applyYouBadges() {
   if (!playerInfo) return;
 
   var hero = document.querySelector('[data-article-id="1"]');
-  if (hero && isYouArticle(1)) hero.classList.add("you-hero");
+  if (hero && isYouArticle(1)) {
+    hero.classList.add("you-hero");
+    var badge = document.createElement("div");
+    badge.className = "you-badge-hero";
+    badge.textContent = "\u2605 YOU";
+    hero.appendChild(badge);
+  }
 
   var cards = document.querySelectorAll(".card[data-article-id]");
   cards.forEach(function(card) {
     var id = parseInt(card.getAttribute("data-article-id"));
-    if (isYouArticle(id)) card.classList.add("you-card");
+    if (isYouArticle(id)) {
+      card.classList.add("you-card");
+      card.style.position = "relative";
+      var badge = document.createElement("div");
+      badge.className = "you-badge-img";
+      badge.textContent = "\u2605 YOU";
+      card.appendChild(badge);
+    }
   });
 
   var colItems = document.querySelectorAll(".col-item[data-article-id]");
   colItems.forEach(function(item) {
     var id = parseInt(item.getAttribute("data-article-id"));
-    if (isYouArticle(id)) item.classList.add("you-card");
+    if (isYouArticle(id)) {
+      item.classList.add("you-card");
+      item.style.position = "relative";
+      var badge = document.createElement("div");
+      badge.className = "you-badge-img";
+      badge.textContent = "\u2605 YOU";
+      item.appendChild(badge);
+    }
   });
 }
 
@@ -542,13 +560,14 @@ function showArticle(id){
   var v=document.getElementById("article-view");
   v.style.display="block";
   var bodyHtml = isYouArticle(id) ? highlightName(a.body) : a.body;
-  var titleHtml = isYouArticle(id) ? highlightName(a.title) : a.title;
-  var youLabel = isYouArticle(id) ? ' <span class="you-badge lg">YOU</span>' : '';
+  var youBadgeHtml = isYouArticle(id) ? '<div class="you-badge-img" style="position:relative;display:inline-block;top:auto;left:auto;margin-bottom:12px">\u2605 YOU</div><br>' : '';
   v.innerHTML='<button class="back-btn" onclick="showHome()">\u2190 トップに戻る</button>'
     +'<div class="article-detail">'
-    +'<img src="'+a.img+'" alt="" style="height:360px">'
-    +'<span class="cat '+a.catClass+'">'+a.cat+'</span>'+youLabel
-    +'<h2>'+titleHtml+'</h2>'
+    +'<div style="position:relative;display:inline-block;width:100%"><img src="'+a.img+'" alt="" style="height:360px">'
+    +(isYouArticle(id)?'<div class="you-badge-hero">\u2605 YOU</div>':'')
+    +'</div>'
+    +'<span class="cat '+a.catClass+'">'+a.cat+'</span>'
+    +'<h2>'+a.title+'</h2>'
     +'<div class="meta">'+a.date+' \u00B7 '+a.author+'</div>'
     +'<div class="content">'+bodyHtml+'</div>'
     +'</div>';
