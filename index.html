@@ -6,8 +6,9 @@
 <title>KICK OFF Daily</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif;background:#f0f0f0;color:#222;line-height:1.6}
+body{font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif;background:#f0f0f0;color:#222;line-height:1.6;overflow-x:hidden;width:100%}
 .site-wrap{width:100%;max-width:800px;margin:0 auto;padding:0 16px}
+header,.breaking,footer{max-width:100%;overflow:hidden}
 header{background:#1a1a2e;color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 header h1{font-size:24px;font-weight:800;letter-spacing:.5px;margin:0;cursor:pointer}
 header h1 span{color:#e94560}
@@ -39,19 +40,25 @@ main{padding:24px 0}
 @media(max-width:640px){
   header{padding:12px 16px}
   header h1{font-size:20px}
-  header nav{gap:12px}
-  header nav a{font-size:12px}
+  header nav{gap:10px}
+  header nav a{font-size:11px}
   .breaking{padding:6px 16px;font-size:11px}
-  .hero img{height:240px}
-  .hero h2{font-size:18px}
-  .hero .overlay{padding:18px}
-  .hero .desc{font-size:12px}
-  .grid-2{grid-template-columns:1fr;gap:16px}
+  .breaking .ticker{font-size:11px}
+  main{padding:16px 0}
+  .hero img{height:220px}
+  .hero h2{font-size:17px}
+  .hero .overlay{padding:16px}
+  .hero .desc{font-size:11px}
+  .hero .meta{font-size:11px}
+  .grid-2{grid-template-columns:1fr;gap:14px}
   .card h3{font-size:13px}
-  .article-detail{padding:20px}
-  .article-detail h2{font-size:18px}
-  .article-detail img{height:220px !important}
-  .article-detail .content{font-size:13px}
+  .card p{font-size:11px}
+  .section-title{font-size:14px}
+  .article-detail{padding:18px}
+  .article-detail h2{font-size:17px}
+  .article-detail img{height:200px !important}
+  .article-detail .content{font-size:13px;line-height:1.8}
+  .back-btn{font-size:12px;padding:8px 16px}
 }
 .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s;cursor:pointer}
 .card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
