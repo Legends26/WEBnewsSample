@@ -71,6 +71,16 @@ header h1 span{color:#e94560}
 /* === Category Colors === */
 .c-match{background:#e94560}.c-transfer{background:#2196f3}.c-tactics{background:#ff9800}.c-interview{background:#9c27b0}.c-data{background:#4caf50}.c-league{background:#1a3a6a}
 
+/* === YOU Badge === */
+.you-badge{display:inline-block;background:#e94560;color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;margin-left:6px;letter-spacing:.5px;vertical-align:middle;animation:you-pulse 2s ease-in-out infinite}
+.you-badge.lg{font-size:12px;padding:3px 10px;margin-left:8px}
+@keyframes you-pulse{0%,100%{box-shadow:0 0 0 0 rgba(233,69,96,.4)}50%{box-shadow:0 0 0 8px rgba(233,69,96,0)}}
+.you-card{border:2px solid #e94560;position:relative}
+.you-card::after{content:"YOU";position:absolute;top:10px;right:10px;background:#e94560;color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:4px;z-index:2;letter-spacing:.5px;animation:you-pulse 2s ease-in-out infinite}
+.you-hero{border:3px solid #e94560;border-radius:14px}
+.you-hero::after{content:"YOU";position:absolute;top:14px;right:14px;background:#e94560;color:#fff;font-size:13px;font-weight:800;padding:4px 14px;border-radius:6px;z-index:2;letter-spacing:.5px;animation:you-pulse 2s ease-in-out infinite}
+.name-highlight{background:linear-gradient(transparent 60%,rgba(233,69,96,.2) 60%);font-weight:700;padding:0 2px}
+
 /* === Sidebar === */
 .sidebar{display:flex;flex-direction:column;gap:20px}
 .sb-box{background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);overflow:hidden}
@@ -233,7 +243,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
 <div class="content-area">
 
   <!-- Hero -->
-  <article class="hero" onclick="showArticle(1)">
+  <article class="hero" onclick="showArticle(1)" data-article-id="1">
     <img src="src/1ゴールの喜びとチームワーク.png" alt="">
     <div class="overlay">
       <span class="cat c-match">速報</span>
@@ -246,7 +256,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
 
   <!-- Card Grid -->
   <div class="card-grid">
-    <article class="card" onclick="showArticle(2)">
+    <article class="card" onclick="showArticle(2)" data-article-id="2">
       <img src="src/2サッカー選手のトレーニングシーン.png" alt="">
       <div class="body">
         <span class="cat c-league">イングランドPL</span>
@@ -255,7 +265,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
         <div class="meta">15:30 &#124; 佐藤一郎</div>
       </div>
     </article>
-    <article class="card" onclick="showArticle(3)">
+    <article class="card" onclick="showArticle(3)" data-article-id="3">
       <img src="src/3サッカー攻撃のビルドアップ.png" alt="">
       <div class="body">
         <span class="cat c-data">Nリーグ</span>
@@ -264,7 +274,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
         <div class="meta">14:20 &#124; 鈴木花子</div>
       </div>
     </article>
-    <article class="card" onclick="showArticle(4)">
+    <article class="card" onclick="showArticle(4)" data-article-id="4">
       <img src="src/4記者会見での真剣な表情.png" alt="">
       <div class="body">
         <span class="cat c-tactics">カルチョA</span>
@@ -273,7 +283,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
         <div class="meta">13:50 &#124; 田中健太</div>
       </div>
     </article>
-    <article class="card" onclick="showArticle(5)">
+    <article class="card" onclick="showArticle(5)" data-article-id="5">
       <img src="src/5サッカーの試合前夜景.png" alt="">
       <div class="body">
         <span class="cat c-interview">ジャパンブルー</span>
@@ -295,21 +305,21 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
   <!-- Column Section -->
   <div class="sec-title">注目のコラム</div>
   <div class="col-list">
-    <div class="col-item" onclick="showArticle(6)">
+    <div class="col-item" onclick="showArticle(6)" data-article-id="6">
       <img src="src/3サッカー攻撃のビルドアップ.png" alt="">
       <div>
         <h4>【戦術分析】なぜ水上蓮はイングランドPLで通用するのか &#8212; データで紐解くサイドの脅威</h4>
         <div class="meta">コラム &#124; 2025.06.14 &#124; 松本大輔</div>
       </div>
     </div>
-    <div class="col-item" onclick="showArticle(7)">
+    <div class="col-item" onclick="showArticle(7)" data-article-id="7">
       <img src="src/5サッカーの試合前夜景.png" alt="">
       <div>
         <h4>2026W杯アジア最終予選を総括する：ジャパンブルーの「黄金世代」は本物か</h4>
         <div class="meta">コラム &#124; 2025.06.13 &#124; 岡本和也</div>
       </div>
     </div>
-    <div class="col-item" onclick="showArticle(8)">
+    <div class="col-item" onclick="showArticle(8)" data-article-id="8">
       <img src="src/2サッカー選手のトレーニングシーン.png" alt="">
       <div>
         <h4>Nリーグ外国人枠撤廃の衝撃 &#8212; 各クラブの補強戦略はどう変わるか</h4>
@@ -470,6 +480,51 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
 </div></footer>
 
 <script>
+var playerMap = {
+  mizukami: { name: "水上蓮", articles: [2,6,7] },
+  renato: { name: "レナト=シルヴァ", articles: [1,7] },
+  fujiwara: { name: "藤原大地", articles: [4,7] },
+  verde: { name: "ダリオ=ヴェルデ", articles: [1] },
+  sakurai: { name: "桜井誠一", articles: [5,7] },
+  okazaki: { name: "岡崎翔太", articles: [5] }
+};
+
+var params = new URLSearchParams(window.location.search);
+var currentPlayer = params.get("player") || "";
+var playerInfo = playerMap[currentPlayer] || null;
+
+function isYouArticle(id) {
+  return playerInfo && playerInfo.articles.indexOf(id) !== -1;
+}
+
+function highlightName(text) {
+  if (!playerInfo) return text;
+  var name = playerInfo.name;
+  var regex = new RegExp(name, "g");
+  return text.replace(regex, '<span class="name-highlight">' + name + ' <span class="you-badge">YOU</span></span>');
+}
+
+function applyYouBadges() {
+  if (!playerInfo) return;
+
+  var hero = document.querySelector('[data-article-id="1"]');
+  if (hero && isYouArticle(1)) hero.classList.add("you-hero");
+
+  var cards = document.querySelectorAll(".card[data-article-id]");
+  cards.forEach(function(card) {
+    var id = parseInt(card.getAttribute("data-article-id"));
+    if (isYouArticle(id)) card.classList.add("you-card");
+  });
+
+  var colItems = document.querySelectorAll(".col-item[data-article-id]");
+  colItems.forEach(function(item) {
+    var id = parseInt(item.getAttribute("data-article-id"));
+    if (isYouArticle(id)) item.classList.add("you-card");
+  });
+}
+
+window.addEventListener("DOMContentLoaded", applyYouBadges);
+
 var articles = {
   1:{cat:"速報",catClass:"c-match",title:"レナト=シルヴァ、レアルディーノ復帰へ \u2014 移籍金8000万ユーロでクラブ間合意",date:"2025.06.14 16:45",author:"山田太郎",img:"src/1ゴールの喜びとチームワーク.png",body:"<p>ソシエダール・ヴェルデで2シーズン連続二桁得点を記録したFWレナト=シルヴァ（24）が、古巣レアルディーノへの完全移籍についてクラブ間が基本合意に達したことが分かった。移籍金は推定8000万ユーロ（約130億円）。</p><p>シルヴァは2021年にレアルディーノの下部組織からトップチームに昇格。しかし出場機会に恵まれず、2023年にソシエダール・ヴェルデへレンタル移籍。その後完全移籍に切り替わり、昨季はリーグ22ゴールを記録してブレイクした。</p><p>レアルディーノのカルロス=メンドーサ監督は「レナトは我々が育てた選手。世界トップクラスの選手に成長して戻ってきてくれる」と歓迎のコメントを発表。背番号は伝統の「10」が用意されるとの情報もある。</p><p>正式契約は今週中にも発表される見通しで、年俸は推定1200万ユーロの5年契約になるとみられる。</p>"},
   2:{cat:"イングランドPL",catClass:"c-league",title:"水上蓮、今季15ゴール目！シーガルズ逆転勝利に貢献",date:"2025.06.14 15:30",author:"佐藤一郎",img:"src/2サッカー選手のトレーニングシーン.png",body:"<p>イングランドプレミアリーグ第30節、シーガルズはホームでアストンFCを3-2で下し、逆転勝利を収めた。日本代表MF水上蓮は後半78分に今季15ゴール目となる決勝点を決めた。</p><p>前半はアストンFCに先制を許す苦しい展開。しかし後半に入ると、シーガルズのフィリップ=ハーストン監督が攻撃的な布陣に変更。水上は右サイドから中央に移るポジションチェンジでアストンの守備網を混乱させた。</p><p>決勝点の場面、水上はペナルティエリア手前でボールを受けると、DFを1人かわしてカットイン。得意の左足で放ったシュートはゴール右隅に突き刺さった。</p><p>試合後、水上は「チームが苦しい時に点を取れる選手になりたい。15ゴールは通過点。20ゴールを目指す」と語った。</p>"},
@@ -486,13 +541,16 @@ function showArticle(id){
   document.getElementById("home-view").style.display="none";
   var v=document.getElementById("article-view");
   v.style.display="block";
+  var bodyHtml = isYouArticle(id) ? highlightName(a.body) : a.body;
+  var titleHtml = isYouArticle(id) ? highlightName(a.title) : a.title;
+  var youLabel = isYouArticle(id) ? ' <span class="you-badge lg">YOU</span>' : '';
   v.innerHTML='<button class="back-btn" onclick="showHome()">\u2190 トップに戻る</button>'
     +'<div class="article-detail">'
     +'<img src="'+a.img+'" alt="" style="height:360px">'
-    +'<span class="cat '+a.catClass+'">'+a.cat+'</span>'
-    +'<h2>'+a.title+'</h2>'
+    +'<span class="cat '+a.catClass+'">'+a.cat+'</span>'+youLabel
+    +'<h2>'+titleHtml+'</h2>'
     +'<div class="meta">'+a.date+' \u00B7 '+a.author+'</div>'
-    +'<div class="content">'+a.body+'</div>'
+    +'<div class="content">'+bodyHtml+'</div>'
     +'</div>';
   window.scrollTo(0,0);
 }
