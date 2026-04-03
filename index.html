@@ -7,28 +7,18 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sans',sans-serif;background:#f0f0f0;color:#222;line-height:1.6}
-
-/* Layout */
 .site-wrap{width:800px;margin:0 auto}
-
-/* Header */
 header{background:#1a1a2e;color:#fff;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:50;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 header h1{font-size:24px;font-weight:800;letter-spacing:.5px;margin:0;cursor:pointer}
 header h1 span{color:#e94560}
 header nav{display:flex;gap:18px;flex-wrap:wrap}
 header nav a{color:#ccc;text-decoration:none;font-size:13px;font-weight:500;transition:color .2s}
 header nav a:hover{color:#e94560}
-
-/* Breaking */
 .breaking{background:#e94560;color:#fff;font-size:12px;font-weight:600;padding:6px 24px;display:flex;align-items:center;gap:10px;overflow:hidden}
 .breaking .tag{background:rgba(0,0,0,.25);padding:2px 8px;border-radius:3px;font-size:10px;text-transform:uppercase;letter-spacing:1px;flex-shrink:0}
 .breaking .ticker{white-space:nowrap;animation:scroll-left 20s linear infinite}
 @keyframes scroll-left{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-
-/* Main */
 main{padding:24px 0}
-
-/* Hero */
 .hero{position:relative;border-radius:14px;overflow:hidden;margin-bottom:28px;box-shadow:0 4px 20px rgba(0,0,0,.12);cursor:pointer;transition:box-shadow .2s}
 .hero:hover{box-shadow:0 6px 28px rgba(0,0,0,.2)}
 .hero img{width:100%;height:400px;object-fit:cover;display:block}
@@ -36,22 +26,14 @@ main{padding:24px 0}
 .hero h2{color:#fff;font-size:24px;font-weight:800;line-height:1.35;margin:0 0 6px}
 .hero .meta{color:rgba(255,255,255,.65);font-size:12px}
 .hero .desc{color:rgba(255,255,255,.8);font-size:13px;margin-top:8px;line-height:1.6}
-
-/* Badge */
 .cat{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:4px;color:#fff;margin-bottom:8px}
 .cat-match{background:#e94560}
 .cat-transfer{background:#2196f3}
 .cat-tactics{background:#ff9800}
 .cat-interview{background:#9c27b0}
 .cat-data{background:#4caf50}
-
-/* Section Title */
 .section-title{font-size:16px;font-weight:800;margin-bottom:14px;padding-left:10px;border-left:4px solid #e94560;color:#1a1a2e}
-
-/* Grid */
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:28px}
-
-/* Card */
 .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.07);transition:transform .2s,box-shadow .2s;cursor:pointer}
 .card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .card img{width:100%;display:block;object-fit:cover}
@@ -59,8 +41,6 @@ main{padding:24px 0}
 .card h3{font-size:14px;font-weight:700;line-height:1.4;margin:4px 0;color:#1a1a2e}
 .card p{font-size:12px;color:#555;line-height:1.55;margin:0}
 .card .meta{font-size:11px;color:#999;margin-top:6px}
-
-/* Article Detail */
 .article-detail{background:#fff;border-radius:14px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.08);margin-bottom:28px}
 .article-detail img{width:100%;border-radius:10px;margin-bottom:20px;object-fit:cover}
 .article-detail h2{font-size:22px;font-weight:800;line-height:1.4;margin-bottom:8px;color:#1a1a2e}
@@ -69,8 +49,6 @@ main{padding:24px 0}
 .article-detail .content p{margin-bottom:16px}
 .back-btn{display:inline-flex;align-items:center;gap:6px;background:#1a1a2e;color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;margin-bottom:20px;transition:background .2s}
 .back-btn:hover{background:#e94560}
-
-/* Footer */
 footer{background:#1a1a2e;color:rgba(255,255,255,.5);text-align:center;padding:20px;font-size:11px;margin-top:40px}
 footer span{color:#e94560;font-weight:700}
 </style>
@@ -90,20 +68,19 @@ footer span{color:#e94560;font-weight:700}
 
 <div class="breaking">
   <span class="tag">BREAKING</span>
-  <div class="ticker">&#9889; リーグ第15節 &#8212; ホームで劇的逆転勝利！ロスタイムの決勝ゴールでサポーター熱狂 &#9889; 新加入FWが初のフルトレーニング参加 &#9889; 次節アウェイ戦に向け監督が必勝宣言</div>
+  <div class="ticker">&#9889; エストレーラFC リーグ第15節 &#8212; エース・レナト=シルヴァの劇的弾でヴァルキア・ユナイテッドに逆転勝利！ &#9889; 新加入FWダリオ=ヴェルデが初のフルトレーニング参加 &#9889; モレッティ監督「次節アウェイで必ず勝ち点3を獲る」</div>
 </div>
 
 <div class="site-wrap">
 
-  <!-- ===== HOME ===== -->
   <main id="home-view">
     <article class="hero" onclick="showArticle(1)">
       <img src="src/1ゴールの喜びとチームワーク.png" alt="ゴールセレブレーション">
       <div class="overlay">
         <span class="cat cat-match">試合レポート</span>
-        <h2>劇的ロスタイム弾！ホームで逆転勝利</h2>
+        <h2>エストレーラFC、レナト=シルヴァのロスタイム弾でヴァルキアに逆転勝利</h2>
         <div class="meta">2025年6月14日 &#183; 試合レポート &#183; 読了 5分</div>
-        <p class="desc">後半アディショナルタイム、エースFWが鮮やかなボレーシュートを突き刺し、スタジアムは歓喜の渦に包まれた。</p>
+        <p class="desc">後半アディショナルタイム、エースFWレナト=シルヴァが鮮やかなボレーシュートを突き刺し、アレーナ=エストレーラは歓喜の渦に包まれた。</p>
       </div>
     </article>
 
@@ -113,8 +90,8 @@ footer span{color:#e94560;font-weight:700}
         <img src="src/2サッカー選手のトレーニングシーン.png" alt="トレーニング風景" style="height:110px">
         <div class="body">
           <span class="cat cat-transfer">移籍ニュース</span>
-          <h3>大型補強決定！新戦力がトレーニング合流</h3>
-          <p>注目の新加入選手が本日チーム練習に初参加。青いキットに身を包みチームメイトとの連携を確認。</p>
+          <h3>エストレーラFC、新戦力ダリオ=ヴェルデがトレーニング合流</h3>
+          <p>FCソレイユから加入のFWダリオ=ヴェルデが本日チーム練習に初参加。即戦力として期待が高まる。</p>
           <div class="meta">5時間前</div>
         </div>
       </article>
@@ -122,8 +99,8 @@ footer span{color:#e94560;font-weight:700}
         <img src="src/3サッカー攻撃のビルドアップ.png" alt="戦術分析" style="height:110px">
         <div class="body">
           <span class="cat cat-tactics">戦術コラム</span>
-          <h3>4-3-3の可能性 &#8213; 新システム徹底分析</h3>
-          <p>指揮官が試みる新フォーメーションの狙いとは。ポジション別の役割変化を専門家が読み解く。</p>
+          <h3>モレッティ監督が挑む4-3-3 &#8213; エストレーラの新システム徹底分析</h3>
+          <p>4-2-3-1からの転換が生む攻撃の変化。ポジション別の役割をコラムニストのカルロ=フェリーニが読み解く。</p>
           <div class="meta">8時間前</div>
         </div>
       </article>
@@ -135,8 +112,8 @@ footer span{color:#e94560;font-weight:700}
         <img src="src/4記者会見での真剣な表情.png" alt="監督インタビュー" style="height:90px">
         <div class="body">
           <span class="cat cat-interview">インタビュー</span>
-          <h3>監督会見「次節は必ず勝ち点3を獲る」</h3>
-          <p>記者会見で指揮官が語った次戦への意気込みと注目の一問一答。</p>
+          <h3>モレッティ監督会見「グラナーダ戦で必ず勝ち点3を獲る」</h3>
+          <p>次節アウェイ・グラナーダFC戦に向け、指揮官が記者会見で決意を語った。</p>
           <div class="meta">12時間前</div>
         </div>
       </article>
@@ -144,15 +121,14 @@ footer span{color:#e94560;font-weight:700}
         <img src="src/5サッカーの試合前夜景.png" alt="スタジアム全景" style="height:90px">
         <div class="body">
           <span class="cat cat-data">データ分析</span>
-          <h3>ホームスタジアムの驚異的な勝率を検証</h3>
-          <p>今季ホーム戦の勝率85%。スタジアムの雰囲気がもたらすアドバンテージをデータで解析。</p>
+          <h3>アレーナ=エストレーラの驚異的な勝率85% &#8213; ホームの力を検証</h3>
+          <p>今季ホーム戦11勝1分1敗。スタジアムの雰囲気がもたらすアドバンテージをデータで解析。</p>
           <div class="meta">1日前</div>
         </div>
       </article>
     </div>
   </main>
 
-  <!-- ===== ARTICLE DETAIL ===== -->
   <main id="article-view" style="display:none;padding:24px 0"></main>
 
 </div>
@@ -165,38 +141,38 @@ footer span{color:#e94560;font-weight:700}
 var articles = {
   1: {
     cat: "試合レポート", catClass: "cat-match",
-    title: "劇的ロスタイム弾！ホームで逆転勝利",
+    title: "エストレーラFC、レナト=シルヴァのロスタイム弾でヴァルキアに逆転勝利",
     date: "2025年6月14日",
     img: "src/1ゴールの喜びとチームワーク.png",
-    body: "<p>後半アディショナルタイム、エースFWが鮮やかなボレーシュートを突き刺し、スタジアムは歓喜の渦に包まれた。0-1のビハインドから怒涛の反撃を見せたチームの90分間を完全レポートする。</p><p>前半は相手チームのプレスに苦しみ、守備的な展開が続いた。しかし後半開始直後、監督は積極的な選手交代を敢行。攻撃的MFを2枚同時投入するという大胆な采配が功を奏した。</p><p>62分、右サイドからのクロスに合わせたヘディングシュートで同点に追いつくと、スタジアムの雰囲気は一変。サポーターの後押しを受けたチームは、さらに攻勢を強めた。</p><p>そして迎えたアディショナルタイム。左サイドからの鋭いグラウンダーのクロスに、エースFWが完璧なタイミングで合わせたボレーシュートがゴールネットを揺らした。劇的な逆転勝利にスタジアムは熱狂の渦に包まれた。</p><p>試合後、監督は「選手たちの諦めない姿勢が素晴らしかった。サポーターの力が我々を後押ししてくれた」と語った。次節のアウェイ戦に向け、チームの勢いは止まらない。</p>"
+    body: "<p>プレミアディヴィジョン第15節、エストレーラFCはホーム・アレーナ=エストレーラにヴァルキア・ユナイテッドを迎えた。0-1のビハインドから怒涛の反撃を見せたチームの90分間を完全レポートする。</p><p>前半はヴァルキアの守備的MFトマス=ブレナンのプレスに苦しみ、エストレーラは攻撃の糸口を見出せなかった。32分、ヴァルキアのエースFWジェイド=オコナーが右足で先制ゴールを決め、アウェイチームがリードを奪う。</p><p>しかし後半開始直後、モレッティ監督は攻撃的MFのルカ=アマーリとアレッシオ=ナヴァスを同時投入する大胆な采配を敢行。この2枚替えが試合の流れを一変させた。</p><p>62分、右サイドバックのマルコ=テイシェイラからのクロスに、途中出場のアマーリがヘディングで合わせて同点に追いつく。アレーナ=エストレーラは4万2千人の大歓声に包まれた。</p><p>そして迎えた後半アディショナルタイム。左サイドのナヴァスが鋭いグラウンダーのクロスを送ると、エースFWレナト=シルヴァが完璧なタイミングで合わせたボレーシュートがゴールネットを揺らした。</p><p>試合後、モレッティ監督は「選手たちの諦めない姿勢が素晴らしかった。アレーナ=エストレーラのサポーターの力が我々を後押ししてくれた」と語った。次節は敵地カンポ=グラナーダでのアウェイ戦。チームの勢いは止まらない。</p>"
   },
   2: {
     cat: "移籍ニュース", catClass: "cat-transfer",
-    title: "大型補強決定！新戦力がトレーニング合流",
+    title: "エストレーラFC、新戦力ダリオ=ヴェルデがトレーニング合流",
     date: "2025年6月14日",
     img: "src/2サッカー選手のトレーニングシーン.png",
-    body: "<p>注目の新加入選手が本日、チーム練習に初めて参加した。青いトレーニングキットに身を包んだ新戦力は、初日から高い技術力を見せつけ、チームメイトからも好意的な反応が寄せられている。</p><p>新加入選手は前所属クラブで昨シーズン15ゴール12アシストを記録した実力者。移籍金は推定1500万ユーロとされ、クラブ史上最大規模の補強となった。</p><p>トレーニングでは主にポゼッション練習とセットプレーの確認に参加。鋭いパスセンスと正確なシュート技術を披露し、指揮官も「期待以上の選手だ」と高く評価した。</p><p>チームメイトの主将は「素晴らしいクオリティを持った選手。一緒にプレーするのが楽しみだ」とコメント。早ければ今週末のリーグ戦でベンチ入りする可能性もある。</p>"
+    body: "<p>FCソレイユからの移籍が決定していたFWダリオ=ヴェルデ（26）が本日、エストレーラFCのトレーニングセンター「カンポ=ルミエール」でのチーム練習に初めて参加した。</p><p>ヴェルデは前所属のFCソレイユで昨シーズン15ゴール12アシストを記録した実力者。移籍金は推定1500万ユーロとされ、エストレーラ史上最大規模の補強となった。ポルト=アズーリ出身の26歳は、スピードと得点感覚を併せ持つストライカーとして知られる。</p><p>トレーニングでは主にポゼッション練習とセットプレーの確認に参加。鋭いパスセンスと正確なシュート技術を披露し、モレッティ監督も「期待以上の選手だ。レナトとの2トップは相手にとって脅威になる」と高く評価した。</p><p>チームキャプテンのDFセルジオ=カンポスは「素晴らしいクオリティを持った選手。ダリオと一緒にプレーするのが楽しみだ」とコメント。早ければ今週末のグラナーダFC戦でベンチ入りする可能性もあり、サポーターの期待は高まるばかりだ。</p>"
   },
   3: {
     cat: "戦術コラム", catClass: "cat-tactics",
-    title: "4-3-3の可能性 \u2015 新システム徹底分析",
+    title: "モレッティ監督が挑む4-3-3 \u2015 エストレーラの新システム徹底分析",
     date: "2025年6月13日",
     img: "src/3サッカー攻撃のビルドアップ.png",
-    body: "<p>指揮官が今シーズンから導入を進める4-3-3システム。従来の4-2-3-1からの変更は、チームにどのような変化をもたらすのか。戦術面から徹底的に分析する。</p><p>最大の変化はビルドアップの形だ。ダブルボランチからアンカー1枚+インサイドハーフ2枚の構成に変わることで、中盤でのボール保持率が飛躍的に向上している。直近5試合のポゼッション率は平均62%と、昨シーズンの54%から大きく改善された。</p><p>攻撃面では、両ウイングの役割が鍵を握る。左ウイングには内側に絞ってハーフスペースを突く動きが求められ、右ウイングにはタッチライン際でのドリブル突破が期待される。この左右非対称な配置が、相手ディフェンスに混乱を生み出している。</p><p>一方で課題もある。アンカーの脇のスペースを突かれるリスクは常に存在し、トランジション時の守備バランスの確保が今後の改善ポイントとなるだろう。</p>"
+    body: "<p><em>文：カルロ=フェリーニ（戦術アナリスト）</em></p><p>ルイジ=モレッティ監督が今シーズンから導入を進める4-3-3システム。前任のガルシア=エンリケ体制で定着した4-2-3-1からの変更は、エストレーラFCにどのような変化をもたらすのか。戦術面から徹底的に分析する。</p><p>最大の変化はビルドアップの形だ。ダブルボランチからアンカー1枚+インサイドハーフ2枚の構成に変わったことで、中盤でのボール保持率が飛躍的に向上している。アンカーにはベテランMFフェデリコ=モンテスが起用され、彼の正確な配球が攻撃の起点となっている。直近5試合のポゼッション率は平均62%と、昨シーズンの54%から大きく改善された。</p><p>攻撃面では、両ウイングの役割が鍵を握る。左ウイングのルカ=アマーリには内側に絞ってハーフスペースを突く動きが求められ、右ウイングのカイル=ベネットにはタッチライン際でのドリブル突破が期待される。この左右非対称な配置が、相手ディフェンスに混乱を生み出している。</p><p>一方で課題もある。アンカーのモンテスの脇のスペースを突かれるリスクは常に存在し、先日のヴァルキア戦でもトマス=ブレナンにそのエリアを使われ先制点を許した。トランジション時の守備バランスの確保が今後の改善ポイントとなるだろう。</p>"
   },
   4: {
     cat: "インタビュー", catClass: "cat-interview",
-    title: "監督会見「次節は必ず勝ち点3を獲る」",
+    title: "モレッティ監督会見「グラナーダ戦で必ず勝ち点3を獲る」",
     date: "2025年6月13日",
     img: "src/4記者会見での真剣な表情.png",
-    body: "<p>劇的な逆転勝利から一夜明けた記者会見で、指揮官は次節アウェイ戦への強い決意を語った。主なやり取りを掲載する。</p><p><strong>\u2015\u2015 昨日の逆転勝利について</strong><br>「選手たちの精神力には本当に感服している。最後まで諦めない姿勢、それがこのチームの最大の武器だ。トレーニングで積み重ねてきたことが、あの場面で発揮された。」</p><p><strong>\u2015\u2015 新加入選手の合流について</strong><br>「非常にクオリティの高い選手が加わった。チームの競争力が間違いなく上がる。起用については慎重に判断するが、早い段階で戦力になってくれると信じている。」</p><p><strong>\u2015\u2015 次節のアウェイ戦に向けて</strong><br>「相手は現在リーグ3位の強敵だが、我々には勝てる力がある。必ず勝ち点3を持ち帰る。サポーターの皆さんにも、テレビの前で応援していただきたい。」</p>"
+    body: "<p>ヴァルキア・ユナイテッド戦での劇的な逆転勝利から一夜明けた記者会見で、エストレーラFCのルイジ=モレッティ監督は次節アウェイ・グラナーダFC戦への強い決意を語った。主なやり取りを掲載する。</p><p><strong>\u2015\u2015 昨日のヴァルキア戦、逆転勝利について</strong><br>「選手たちの精神力には本当に感服している。レナト（=シルヴァ）のゴールは見事だったが、あの場面を作り出したナヴァスのクロスも素晴らしかった。最後まで諦めない姿勢、それがエストレーラの最大の武器だ。」</p><p><strong>\u2015\u2015 新加入のダリオ=ヴェルデ選手の合流について</strong><br>「非常にクオリティの高い選手が加わった。今日のトレーニングを見たが、レナトとの関係性は非常に良い。チームの競争力が間違いなく上がる。起用については慎重に判断するが、グラナーダ戦でのベンチ入りも十分あり得る。」</p><p><strong>\u2015\u2015 次節、カンポ=グラナーダでのアウェイ戦に向けて</strong><br>「グラナーダFCは現在リーグ3位の強敵だ。ミゲル=サントス監督のもと今季は非常に組織的なチームになっている。しかし我々には勝てる力がある。必ず勝ち点3をカンポ=グラナーダから持ち帰る。サポーターの皆さんにも、テレビの前で応援していただきたい。」</p>"
   },
   5: {
     cat: "データ分析", catClass: "cat-data",
-    title: "ホームスタジアムの驚異的な勝率を検証",
+    title: "アレーナ=エストレーラの驚異的な勝率85% \u2015 ホームの力を検証",
     date: "2025年6月12日",
     img: "src/5サッカーの試合前夜景.png",
-    body: "<p>今シーズンのホーム戦成績は11勝1分1敗。勝率にして実に85%という驚異的な数字を記録している。この圧倒的なホームアドバンテージの要因をデータから読み解く。</p><p><strong>観客動員数との相関</strong><br>平均観客動員数42,000人を超える試合では勝率が92%に上昇。一方、30,000人を下回った試合では67%に低下する。サポーターの声援が選手のパフォーマンスに直結していることがデータからも裏付けられた。</p><p><strong>得点パターンの特徴</strong><br>ホーム戦での得点の58%が後半に生まれている。これはサポーターの後押しによる終盤の体力・精神力の維持が大きな要因と考えられる。特にアディショナルタイムでの得点率はリーグトップだ。</p><p><strong>ピッチコンディション</strong><br>ホームスタジアムの芝は天然芝とハイブリッド芝の組み合わせ。チームのパスサッカーに最適化された整備が行われており、パス成功率はホーム戦で平均5%高い数値を示している。</p>"
+    body: "<p>エストレーラFCの本拠地アレーナ=エストレーラにおける今シーズンの成績は11勝1分1敗。勝率にして実に85%という驚異的な数字を記録している。この圧倒的なホームアドバンテージの要因をデータから読み解く。</p><p><strong>観客動員数との相関</strong><br>アレーナ=エストレーラの収容人数は48,000人。平均観客動員数42,000人を超える試合では勝率が92%に上昇する一方、30,000人を下回った試合では67%に低下する。「第12の選手」と称されるエストレーラサポーターの声援が、選手のパフォーマンスに直結していることがデータからも裏付けられた。</p><p><strong>得点パターンの特徴</strong><br>ホーム戦での得点の58%が後半に生まれている。先日のヴァルキア戦でのレナト=シルヴァの決勝ゴールもアディショナルタイムだった。これはサポーターの後押しによる終盤の体力・精神力の維持が大きな要因と考えられる。特にアディショナルタイムでの得点率はプレミアディヴィジョン全体でトップだ。</p><p><strong>ピッチコンディション</strong><br>アレーナ=エストレーラの芝は天然芝とハイブリッド芝の組み合わせで、グラウンドキーパーのホルヘ=パディーリャ氏が徹底管理している。エストレーラのパスサッカーに最適化された整備が行われており、パス成功率はホーム戦で平均5%高い数値を示している。モレッティ監督が志向するポゼッションスタイルとの相性は抜群だ。</p>"
   }
 };
 
