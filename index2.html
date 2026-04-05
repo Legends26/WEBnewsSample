@@ -12,19 +12,10 @@ body{font-family:'Helvetica Neue',Arial,'Hiragino Kaku Gothic ProN','Hiragino Sa
 .topbar .inner{max-width:1080px;margin:0 auto;width:100%;padding:0 20px;display:flex;justify-content:space-between}
 .topbar a{color:rgba(255,255,255,.8);text-decoration:none;margin-left:12px;font-size:11px}
 .topbar a:hover{color:#fff}
-header{background:#0d1f3c;padding:14px 0}
+header{background:#0d1f3c;padding:10px 0}
 header .inner{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
-.header-left{display:flex;align-items:center;gap:0}
-header h1{font-size:28px;font-weight:900;color:#fff;cursor:pointer;margin:0;display:flex;align-items:baseline;gap:4px}
-header h1 .logo-kick{font-style:italic;font-size:32px;letter-spacing:-1px;text-transform:uppercase;background:linear-gradient(180deg,#fff 40%,#ccc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))}
-header h1 .logo-off{font-style:italic;font-size:32px;letter-spacing:-1px;text-transform:uppercase;background:linear-gradient(180deg,#fff 40%,#ccc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))}
-header h1 .logo-daily{font-style:normal;font-size:16px;font-weight:800;color:#1a1a2e;background:#e94560;padding:2px 8px;border-radius:4px;margin-left:6px;letter-spacing:1px;text-transform:uppercase;-webkit-text-fill-color:#fff;vertical-align:middle;position:relative;top:-2px}
-.header-date{display:flex;align-items:center;gap:10px;margin-left:20px;padding-left:20px;border-left:2px solid rgba(233,69,96,.4)}
-.header-date .date-year{font-size:42px;font-weight:900;color:#e94560;line-height:1;letter-spacing:2px;font-style:italic;text-shadow:0 0 24px rgba(233,69,96,.5),0 0 48px rgba(233,69,96,.2)}
-.header-date .date-divider{width:2px;height:34px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.3),transparent)}
-.header-date .date-detail{display:flex;flex-direction:column;gap:0}
-.header-date .date-month{font-size:16px;font-weight:800;color:#fff;line-height:1.2}
-.header-date .date-day{font-size:11px;color:rgba(255,255,255,.5);line-height:1.2}
+header h1{font-size:28px;font-weight:900;color:#fff;cursor:pointer;margin:0}
+header h1 span{color:#e94560}
 .search-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:6px 12px;color:#fff;font-size:12px;width:200px;outline:none}
 .search-box::placeholder{color:rgba(255,255,255,.5)}
 .league-nav{background:#1a3a6a;overflow-x:auto;white-space:nowrap}
@@ -137,13 +128,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
   .league-nav a{font-size:12px;padding:8px 12px}
 }
 @media(max-width:480px){
-  header h1 .logo-kick,header h1 .logo-off{font-size:22px}
-  header h1 .logo-daily{font-size:11px;padding:2px 5px}
-  .header-date{margin-left:12px;padding-left:12px}
-  .header-date .date-year{font-size:32px}
-  .header-date .date-month{font-size:13px}
-  .header-date .date-day{font-size:10px}
-  .header-date .date-divider{height:24px}
+  header h1{font-size:22px}
   .topbar{display:none}
   .search-box{display:none}
   .league-nav a{font-size:12px;padding:8px 10px}
@@ -183,16 +168,10 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="inner"><span>1975年4月30日（水）18:42 JST</span><span><a href="#">ログイン</a><a href="#">会員登録</a><a href="#">プレミアム</a></span></div></div>
-<header><div class="inner">
-  <div class="header-left">
-    <h1 onclick="showHome()"><span class="logo-kick">KICK</span><span class="logo-off">OFF</span><span class="logo-daily">Daily</span></h1>
-    <div class="header-date"><span class="date-year">1975</span><span class="date-divider"></span><div class="date-detail"><span class="date-month">4月30日</span><span class="date-day">水曜日</span></div></div>
-  </div>
-  <input class="search-box" type="text" placeholder="選手名・チーム名で検索">
-</div></header>
+<div class="topbar"><div class="inner"><span>2025年6月14日（土）18:42 JST</span><span><a href="#">ログイン</a><a href="#">会員登録</a><a href="#">プレミアム</a></span></div></div>
+<header><div class="inner"><h1 onclick="showHome()">KICK OFF <span>Daily</span></h1><input class="search-box" type="text" placeholder="選手名・チーム名で検索"></div></header>
 <nav class="league-nav"><div class="inner"><a href="#" class="active">トップ</a><a href="#">Nリーグ</a><a href="#">イングランドPL</a><a href="#">エスパニューラ</a><a href="#">カルチョA</a><a href="#">ドイツBL</a><a href="#">欧州CL/EL</a><a href="#">ジャパンブルー</a><a href="#">移籍情報</a><a href="#">コラム</a></div></nav>
-<div class="breaking"><div class="inner"><span class="tag">速報</span><div class="ticker">&#9889; エストレーラFC レナト=シルヴァが劇的ロスタイム弾！ヴァルキアに逆転勝利 &#9889; 新加入FWダリオ=ヴェルデがカンポ=ルミエールで初練習参加 &#9889;【国際】サイゴン陥落 &#8212; ベトナム戦争が事実上終結 &#9889;【国際】アポロ・ソユーズ共同ミッション 7月に実施へ</div></div></div>
+<div class="breaking"><div class="inner"><span class="tag">速報</span><div class="ticker">&#9889; エストレーラFC レナト=シルヴァが劇的ロスタイム弾！ヴァルキアに逆転勝利 &#9889; 新加入FWダリオ=ヴェルデがカンポ=ルミエールで初練習参加 &#9889; モレッティ監督「グラナーダ戦で必ず勝ち点3を獲る」</div></div></div>
 
 <div class="wrap">
 <div class="pr-banner"><div class="pr-label">PR</div><h3>SPORTZONE 年間プラン 最大40%OFF</h3><p>Nリーグ全試合＋欧州5大リーグをいつでもどこでも。今だけ特別価格。</p><a href="#" class="btn">今すぐ申し込む &#8594;</a></div>
@@ -206,27 +185,19 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
     <span class="cat c-match">速報</span>
     <h2>背番号14 レナト=シルヴァ、ロスタイムの歓喜 &#8212; エストレーラFCが劇的逆転勝利</h2>
     <p class="desc">赤いユニフォームの背番号14がスタンドへ駆け寄る。アディショナルタイムの決勝弾でアレーナ=エストレーラは歓喜に包まれた。</p>
-    <div class="meta">1975.04.30 16:45 &#124; 山田太郎</div>
+    <div class="meta">2025.06.14 16:45 &#124; 山田太郎</div>
   </div>
   <span class="photo-credit">Photo: Unsplash</span>
 </article>
 
 <div class="card-grid">
-  <article class="card" onclick="showArticle(9)" data-article-id="9">
-    <img src="src/サイゴン脱出の瞬間.png" alt="" style="height:130px">
-    <div class="body"><span class="cat c-league">国際</span><h3>サイゴン陥落、ベトナム戦争が事実上終結 &#8212; 米大使館から最後のヘリが飛び立つ</h3><p>4月30日、北ベトナム軍がサイゴンに入城。約20年にわたるベトナム戦争が事実上の終結を迎えた。</p><div class="meta">1975.04.30 &#124; 国際部</div></div>
+  <article class="card" onclick="showArticle(2)" data-article-id="2">
+    <img src="src/2サッカー選手のトレーニングシーン.png" alt="" style="height:130px">
+    <div class="body"><span class="cat c-transfer">移籍ニュース</span><h3>青いキットで初練習 &#8212; 新加入FWダリオ=ヴェルデがエストレーラ合流</h3><p>FCソレイユから加入のヴェルデがカンポ=ルミエールで初のチーム練習に参加。対人練習で鋭さを見せた。</p><div class="meta">15:30 &#124; 佐藤一郎</div></div>
   </article>
   <article class="card" onclick="showArticle(3)" data-article-id="3">
     <img src="src/3サッカー攻撃のビルドアップ.png" alt="" style="height:130px">
     <div class="body"><span class="cat c-tactics">戦術コラム</span><h3>俯瞰で見えた4-3-3の真実 &#8213; エストレーラの攻撃ビルドアップを徹底解剖</h3><p>上空から捉えたトレーニング映像が話題に。モンテスを起点とした新システムの全貌が浮かぶ。</p><div class="meta">14:20 &#124; カルロ=フェリーニ</div></div>
-  </article>
-  <article class="card" onclick="showArticle(10)" data-article-id="10">
-    <img src="src/アメリカとソ連の宇宙船ドッキング.png" alt="" style="height:130px">
-    <div class="body"><span class="cat c-league">国際</span><h3>米ソ宇宙船が初のドッキングへ &#8212; アポロ・ソユーズ共同ミッション、7月実施を正式発表</h3><p>冷戦下の歴史的共同計画。アメリカのアポロとソ連のソユーズが宇宙空間でドッキングする。</p><div class="meta">1975.04.28 &#124; 国際部</div></div>
-  </article>
-  <article class="card" onclick="showArticle(2)" data-article-id="2">
-    <img src="src/2サッカー選手のトレーニングシーン.png" alt="" style="height:130px">
-    <div class="body"><span class="cat c-transfer">移籍ニュース</span><h3>青いキットで初練習 &#8212; 新加入FWダリオ=ヴェルデがエストレーラ合流</h3><p>FCソレイユから加入のヴェルデがカンポ=ルミエールで初のチーム練習に参加。対人練習で鋭さを見せた。</p><div class="meta">15:30 &#124; 佐藤一郎</div></div>
   </article>
   <article class="card" onclick="showArticle(4)" data-article-id="4">
     <img src="src/4記者会見での真剣な表情.png" alt="" style="height:130px">
@@ -242,22 +213,9 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
 
 <div class="sec-title">注目のコラム</div>
 <div class="col-list">
-  <div class="col-item" onclick="showArticle(6)" data-article-id="6"><img src="src/3サッカー攻撃のビルドアップ.png" alt=""><div><h4>【戦術分析】エストレーラの4-3-3が機能する理由 &#8212; ビルドアップの鍵はモンテスの立ち位置</h4>        <div class="meta">コラム &#124; 1975.04.29 &#124; カルロ=フェリーニ</div></div></div>
-  <div class="col-item" onclick="showArticle(7)" data-article-id="7"><img src="src/5サッカーの試合前夜景.png" alt=""><div><h4>アレーナ=エストレーラの夜 &#8212; ホームスタジアムが生み出す逆転劇の秘密</h4>        <div class="meta">コラム &#124; 1975.04.28 &#124; 岡本和也</div></div></div>
-  <div class="col-item" onclick="showArticle(8)" data-article-id="8"><img src="src/2サッカー選手のトレーニングシーン.png" alt=""><div><h4>ダリオ=ヴェルデ獲得の舞台裏 &#8212; FCソレイユとの交渉はいかにして実現したか</h4>        <div class="meta">コラム &#124; 1975.04.27 &#124; 高橋直樹</div></div></div>
-
-<div class="sec-title" style="border-left-color:#1a3a6a">国際ニュース</div>
-<div class="card-grid" style="margin-bottom:24px">
-  <article class="card" onclick="showArticle(9)" data-article-id="9">
-    <img src="src/5サッカーの試合前夜景.png" alt="" style="height:130px">
-    <div class="body"><span class="cat c-league">国際</span><h3>サイゴン陥落、ベトナム戦争が事実上終結 &#8212; 米大使館から最後のヘリが飛び立つ</h3><p>4月30日、北ベトナム軍がサイゴンに入城。約20年にわたるベトナム戦争が事実上の終結を迎えた。</p><div class="meta">1975.04.30 &#124; 国際部</div></div>
-  </article>
-  <article class="card" onclick="showArticle(10)" data-article-id="10">
-    <img src="src/1ゴールの喜びとチームワーク.png" alt="" style="height:130px">
-    <div class="body"><span class="cat c-league">国際</span><h3>米ソ宇宙船が初のドッキングへ &#8212; アポロ・ソユーズ共同ミッション、7月実施を正式発表</h3><p>冷戦下の歴史的共同計画。アメリカのアポロとソ連のソユーズが宇宙空間でドッキングする。</p><div class="meta">1975.04.28 &#124; 国際部</div></div>
-  </article>
-</div>
-
+  <div class="col-item" onclick="showArticle(6)" data-article-id="6"><img src="src/3サッカー攻撃のビルドアップ.png" alt=""><div><h4>【戦術分析】エストレーラの4-3-3が機能する理由 &#8212; ビルドアップの鍵はモンテスの立ち位置</h4><div class="meta">コラム &#124; 2025.06.14 &#124; カルロ=フェリーニ</div></div></div>
+  <div class="col-item" onclick="showArticle(7)" data-article-id="7"><img src="src/5サッカーの試合前夜景.png" alt=""><div><h4>アレーナ=エストレーラの夜 &#8212; ホームスタジアムが生み出す逆転劇の秘密</h4><div class="meta">コラム &#124; 2025.06.13 &#124; 岡本和也</div></div></div>
+  <div class="col-item" onclick="showArticle(8)" data-article-id="8"><img src="src/2サッカー選手のトレーニングシーン.png" alt=""><div><h4>ダリオ=ヴェルデ獲得の舞台裏 &#8212; FCソレイユとの交渉はいかにして実現したか</h4><div class="meta">コラム &#124; 2025.06.12 &#124; 高橋直樹</div></div></div>
 </div>
 </div>
 
@@ -298,7 +256,7 @@ footer .inner{max-width:1080px;margin:0 auto;padding:0 20px}
 
 <footer><div class="inner">
 <div class="footer-grid">
-  <div><h4><em style="letter-spacing:-1px">KICK OFF</em> <span style="background:#e94560;color:#fff;padding:1px 6px;border-radius:3px;font-size:11px;font-style:normal;letter-spacing:1px">DAILY</span></h4><p>最大級のサッカー専門ニュースメディア。最新の移籍情報からリーグ速報まで。</p><div class="footer-social"><span>X</span><span>IG</span><span>YT</span><span>FB</span></div></div>
+  <div><h4>KICK OFF <span style="color:#e94560">Daily</span></h4><p>最大級のサッカー専門ニュースメディア。最新の移籍情報からリーグ速報まで。</p><div class="footer-social"><span>X</span><span>IG</span><span>YT</span><span>FB</span></div></div>
   <div><h4>リーグ</h4><a href="#">プレミアディヴィジョン</a><a href="#">イングランドPL</a><a href="#">エスパニューラ</a><a href="#">カルチョA</a><a href="#">ドイツBL</a></div>
   <div><h4>コンテンツ</h4><a href="#">ニュース</a><a href="#">コラム</a><a href="#">動画</a><a href="#">移籍情報</a><a href="#">順位表</a></div>
   <div><h4>サービス</h4><a href="#">プレミアム会員</a><a href="#">アプリ</a><a href="#">お問い合わせ</a><a href="#">プライバシーポリシー</a><a href="#">利用規約</a></div>
@@ -317,16 +275,14 @@ function applyYouBadges(){if(!playerInfo)return;var hero=document.querySelector(
 window.addEventListener("DOMContentLoaded",applyYouBadges);
 
 var articles={
-1:{cat:"速報",catClass:"c-match",title:"背番号14 レナト=シルヴァ、ロスタイムの歓喜 \u2014 エストレーラFCが劇的逆転勝利",date:"1975.04.30 16:45",author:"山田太郎",img:"src/1ゴールの喜びとチームワーク.png",body:"<p>プレミアディヴィジョン第15節、アレーナ=エストレーラに4万2千人の観衆が詰めかけた一戦。エストレーラFCのエースFW、背番号14のレナト=シルヴァがアディショナルタイムに劇的な決勝ゴールを叩き込み、チームを逆転勝利に導いた。</p><p>赤いユニフォームに身を包んだシルヴァは、ゴール直後に両手を広げてスタンドへ駆け寄り、サポーターとともに歓喜を爆発させた。駆け寄るチームメイトに囲まれ、背番号14がスタジアムのライトに照らされる姿は、今季のベストシーンの一つとなるだろう。</p><p>前半32分、ヴァルキア・ユナイテッドのジェイド=オコナーに先制を許したエストレーラだったが、モレッティ監督が後半から投入したルカ=アマーリが62分に同点ヘッドを決め、試合を振り出しに戻す。そして90+3分、左サイドのアレッシオ=ナヴァスからのクロスに、シルヴァが完璧なボレーで合わせた。</p><p>試合後、シルヴァは「このスタジアムで、このサポーターの前でゴールを決められる幸せを噛み締めている。14番を背負う責任を果たせた」と語った。</p>"},
-2:{cat:"移籍ニュース",catClass:"c-transfer",title:"青いキットで初練習 \u2014 新加入FWダリオ=ヴェルデがエストレーラ合流",date:"1975.04.30 15:30",author:"佐藤一郎",img:"src/2サッカー選手のトレーニングシーン.png",body:"<p>FCソレイユからの移籍が決定したFWダリオ=ヴェルデ（26）が本日、エストレーラFCのトレーニングセンター「カンポ=ルミエール」でチーム練習に初めて合流した。</p><p>青いトレーニングキットに着替えたヴェルデは、午前中のセッションでさっそくボールを足元に収め、1対1の対人練習に汗を流した。屋外ピッチではDFセルジオ=カンポスとのマッチアップも行われ、鋭いターンとスピードでベテランDFを翻弄する場面も。</p><p>ヴェルデはポルト=アズーリ出身の26歳。前所属のFCソレイユでは昨季15ゴール12アシストを記録し、移籍金は推定1500万ユーロとクラブ史上最大規模の補強となった。</p><p>モレッティ監督は練習後、「ダリオは初日から高いインテンシティで取り組んでくれた。レナトとの2トップは相手にとって脅威になる」と手応えを語った。</p>"},
-3:{cat:"戦術コラム",catClass:"c-tactics",title:"俯瞰で見えた4-3-3の真実 \u2015 エストレーラの攻撃ビルドアップを徹底解剖",date:"1975.04.30 14:20",author:"カルロ=フェリーニ",img:"src/3サッカー攻撃のビルドアップ.png",body:"<p><em>文：カルロ=フェリーニ（戦術アナリスト）</em></p><p>上空から捉えたエストレーラFCのトレーニング映像が話題を呼んでいる。ピッチ全体に配置された選手たちのポジショニングから、モレッティ監督が目指す4-3-3の攻撃ビルドアップの全貌が浮かび上がった。</p><p>映像で確認できるのは、アンカーのフェデリコ=モンテスを起点に、2人のインサイドハーフが左右非対称に開くダイヤモンド型の中盤構成だ。</p><p>この俯瞰視点で最も注目すべきは、DFラインからの縦パスのコースだ。新システムでは、モンテスが一列落ちることでCBからの縦パスの受け手が増え、ビルドアップの選択肢が飛躍的に広がっている。</p><p>直近5試合のポゼッション率は平均62%と、昨季の54%から大幅に改善。フォーメーション図だけでは読み取れない、ピッチ上の「距離感」の最適化によるものだ。</p>"},
-4:{cat:"インタビュー",catClass:"c-interview",title:"マイクの前で決意表明 \u2014 モレッティ監督「グラナーダ戦で必ず勝ち点3を獲る」",date:"1975.04.30 13:50",author:"田中健太",img:"src/4記者会見での真剣な表情.png",body:"<p>逆転勝利から一夜明けた記者会見場。スーツ姿のルイジ=モレッティ監督は、マイクの前で真剣な表情を崩さず、次節アウェイ・グラナーダFC戦への強い決意を語った。</p><p><strong>\u2015\u2015 昨日のヴァルキア戦を振り返って</strong><br>「あの逆転劇は選手たちの精神力の賜物だ。しかし、前半の出来には満足していない。勝って反省できるうちに修正したい。」</p><p><strong>\u2015\u2015 新加入のダリオ=ヴェルデ選手について</strong><br>「今日の練習を見たが、期待以上のクオリティだ。グラナーダ戦でのベンチ入りは十分にあり得る。」</p><p><strong>\u2015\u2015 カンポ=グラナーダでのアウェイ戦に向けて</strong><br>「グラナーダFCは現在リーグ3位の強敵だ。しかし、我々にはアレーナ=エストレーラで培った自信がある。必ず勝ち点3を持ち帰る。」</p>"},
-5:{cat:"スタジアム特集",catClass:"c-data",title:"ライトアップされた聖地 \u2014 アレーナ=エストレーラの夜景と驚異の勝率85%",date:"1975.04.30 12:00",author:"中村翼",img:"src/5サッカーの試合前夜景.png",body:"<p>夜空に浮かび上がるアレーナ=エストレーラ。試合前、照明に照らされた鮮やかなグリーンのピッチは、これから始まるドラマへの期待を否が応でも高める。</p><p>収容人数48,000人のこのスタジアムで、エストレーラFCは今季ホーム戦11勝1分1敗、勝率85%という驚異的な成績を残している。</p><p><strong>夜の観客が生むアドバンテージ</strong><br>ナイトゲームの勝率は92%とデーゲームの78%を大きく上回る。照明に映える赤いユニフォーム、4万人超のサポーターが作り出す雰囲気は、対戦相手にとって最大の脅威だ。</p><p><strong>ピッチコンディション</strong><br>天然芝とハイブリッド芝を組み合わせた最新のサーフェスは、グラウンドキーパーのホルヘ=パディーリャ氏が徹底管理。パス成功率はホーム戦で平均5%高い数値を示している。</p>"},
-6:{cat:"コラム",catClass:"c-tactics",title:"【戦術分析】エストレーラの4-3-3が機能する理由 \u2014 ビルドアップの鍵はモンテスの立ち位置",date:"1975.04.29",author:"カルロ=フェリーニ",img:"src/3サッカー攻撃のビルドアップ.png",body:"<p><em>文：カルロ=フェリーニ（戦術アナリスト）</em></p><p>エストレーラFCの4-3-3が急速に機能し始めている。その最大の要因は、アンカーのフェデリコ=モンテスのポジショニングにある。</p><p>モンテスはビルドアップ時、従来のアンカーよりも1列低い位置に落ちる。これにより事実上の3バックが形成され、両SBが高い位置を取れるようになった。</p><p>攻撃面では、レナト=シルヴァとルカ=アマーリの連携が鍵。シルヴァが中央で起点を作り、アマーリがハーフスペースに飛び出すパターンは、直近5試合で7回のチャンスを生んでいる。</p><p>課題はトランジション時の守備。ヴァルキア戦ではトマス=ブレナンにアンカー脇を使われ先制点を許した。グラナーダ戦では、この弱点をどう克服するかが焦点となる。</p>"},
-7:{cat:"コラム",catClass:"c-data",title:"アレーナ=エストレーラの夜 \u2014 ホームスタジアムが生み出す逆転劇の秘密",date:"1975.04.28",author:"岡本和也",img:"src/5サッカーの試合前夜景.png",body:"<p>エストレーラFCのホーム、アレーナ=エストレーラで今季生まれた逆転勝利は実に6回。その全てがナイトゲームだった。</p><p><strong>後半に強いチーム</strong><br>得点の58%が後半に生まれているエストレーラ。アディショナルタイムでの得点率はプレミアディヴィジョン全体でトップだ。</p><p><strong>サポーターの力</strong><br>平均観客動員42,000人。キャプテンのセルジオ=カンポスは「あの声援の中では疲れを感じない」と語る。</p><p><strong>モレッティ監督の哲学</strong><br>「90分で勝負は決まらない」が口癖のモレッティ監督。最後の1秒まで諦めないメンタリティは、アレーナ=エストレーラの雰囲気があってこそ成り立つ。</p>"},
-8:{cat:"コラム",catClass:"c-transfer",title:"ダリオ=ヴェルデ獲得の舞台裏 \u2014 FCソレイユとの交渉はいかにして実現したか",date:"1975.04.27",author:"高橋直樹",img:"src/2サッカー選手のトレーニングシーン.png",body:"<p>エストレーラFCがFWダリオ=ヴェルデの獲得を発表した。移籍金1500万ユーロという大型補強の舞台裏に迫る。</p><p><strong>交渉のきっかけ</strong><br>モレッティ監督がヴェルデに注目したのは昨年11月。FCソレイユとのリーグ戦で見せた2ゴール1アシストが決め手だった。</p><p><strong>FCソレイユとの駆け引き</strong><br>当初2000万ユーロ以上を要求されたが、ヴェルデ本人の「エストレーラでプレーしたい」という強い希望が交渉を動かした。</p><p><strong>レナトとの2トップへの期待</strong><br>本日のトレーニングでは、青いキットに身を包んだヴェルデがレナト=シルヴァとの連携練習を行った。期待は膨らむばかりだ。</p>"},
-9:{cat:"国際",catClass:"c-league",title:"サイゴン陥落、ベトナム戦争が事実上終結 \u2014 米大使館から最後のヘリが飛び立つ",date:"1975.04.30",author:"国際部",img:"src/サイゴン脱出の瞬間.png",body:"<p>1975年4月30日、北ベトナム人民軍と南ベトナム解放民族戦線の部隊がサイゴン（現ホーチミン市）に入城し、南ベトナム政府は無条件降伏を宣言した。約20年にわたり、300万人以上の犠牲者を出したベトナム戦争が事実上の終結を迎えた。</p><p>早朝、アメリカ大使館の屋上から最後の避難ヘリコプターが飛び立つ映像は、世界中のテレビで放映され、衝撃を与えた。大使館周辺には出国を求める数千人の市民が殺到し、混乱を極めた。</p><p>アメリカのフォード大統領は声明で「ベトナムにおけるアメリカの関与は終わった」と述べ、約58,000人のアメリカ兵が命を落としたこの戦争の幕引きを宣言した。</p><p>国際社会では、冷戦構造の中で東西両陣営の反応が分かれている。ソ連と中国はベトナムの統一を歓迎する声明を出す一方、西側諸国では今後の東南アジア情勢への懸念が広がっている。</p><p>なお、同地域で活動中だったスポーツ関係者の安全も確認されており、来月予定されていたアジアサッカー親善大会の開催地変更が検討されている。</p>"},
-10:{cat:"国際",catClass:"c-league",title:"米ソ宇宙船が初のドッキングへ \u2014 アポロ・ソユーズ共同ミッション、7月実施を正式発表",date:"1975.04.28",author:"国際部",img:"src/アメリカとソ連の宇宙船ドッキング.png",body:"<p>アメリカ航空宇宙局（NASA）とソ連の宇宙機関は28日、今年7月にアメリカのアポロ宇宙船とソ連のソユーズ宇宙船を宇宙空間でドッキングさせる共同ミッション「アポロ・ソユーズテスト計画（ASTP）」の実施を正式に発表した。</p><p>冷戦の真っただ中にある米ソ両超大国が、宇宙という舞台で初めて手を結ぶ歴史的プロジェクトだ。7月15日にソユーズ19号がバイコヌール宇宙基地から、同17日にアポロ18号がケネディ宇宙センターからそれぞれ打ち上げられ、地球軌道上でドッキングを行う計画。</p><p>両国の宇宙飛行士が宇宙空間で握手を交わす瞬間は、全世界にテレビ中継される予定で、「宇宙のデタント（緊張緩和）」として国際的な注目を集めている。</p><p>フォード大統領は「このミッションは、競争ではなく協力によって人類がより大きな成果を上げられることの証明だ」とコメント。一方で、両国の宇宙開発競争は今後も続くとの見方が大勢を占めている。</p><p>なお、このドッキング成功を記念した特別切手の発行も両国で計画されており、スポーツ界からも祝福の声が上がっている。エストレーラFCのモレッティ監督は「チームワークは国境を越える。宇宙でも、ピッチの上でも」と粋なコメントを寄せた。</p>"}
+1:{cat:"速報",catClass:"c-match",title:"背番号14 レナト=シルヴァ、ロスタイムの歓喜 \u2014 エストレーラFCが劇的逆転勝利",date:"2025.06.14 16:45",author:"山田太郎",img:"src/1ゴールの喜びとチームワーク.png",body:"<p>プレミアディヴィジョン第15節、アレーナ=エストレーラに4万2千人の観衆が詰めかけた一戦。エストレーラFCのエースFW、背番号14のレナト=シルヴァがアディショナルタイムに劇的な決勝ゴールを叩き込み、チームを逆転勝利に導いた。</p><p>赤いユニフォームに身を包んだシルヴァは、ゴール直後に両手を広げてスタンドへ駆け寄り、サポーターとともに歓喜を爆発させた。駆け寄るチームメイトに囲まれ、背番号14がスタジアムのライトに照らされる姿は、今季のベストシーンの一つとなるだろう。</p><p>前半32分、ヴァルキア・ユナイテッドのジェイド=オコナーに先制を許したエストレーラだったが、モレッティ監督が後半から投入したルカ=アマーリが62分に同点ヘッドを決め、試合を振り出しに戻す。そして90+3分、左サイドのアレッシオ=ナヴァスからのクロスに、シルヴァが完璧なボレーで合わせた。</p><p>試合後、シルヴァは「このスタジアムで、このサポーターの前でゴールを決められる幸せを噛み締めている。14番を背負う責任を果たせた」と語った。</p>"},
+2:{cat:"移籍ニュース",catClass:"c-transfer",title:"青いキットで初練習 \u2014 新加入FWダリオ=ヴェルデがエストレーラ合流",date:"2025.06.14 15:30",author:"佐藤一郎",img:"src/2サッカー選手のトレーニングシーン.png",body:"<p>FCソレイユからの移籍が決定したFWダリオ=ヴェルデ（26）が本日、エストレーラFCのトレーニングセンター「カンポ=ルミエール」でチーム練習に初めて合流した。</p><p>青いトレーニングキットに着替えたヴェルデは、午前中のセッションでさっそくボールを足元に収め、1対1の対人練習に汗を流した。屋外ピッチではDFセルジオ=カンポスとのマッチアップも行われ、鋭いターンとスピードでベテランDFを翻弄する場面も。</p><p>ヴェルデはポルト=アズーリ出身の26歳。前所属のFCソレイユでは昨季15ゴール12アシストを記録し、移籍金は推定1500万ユーロとクラブ史上最大規模の補強となった。</p><p>モレッティ監督は練習後、「ダリオは初日から高いインテンシティで取り組んでくれた。レナトとの2トップは相手にとって脅威になる」と手応えを語った。</p>"},
+3:{cat:"戦術コラム",catClass:"c-tactics",title:"俯瞰で見えた4-3-3の真実 \u2015 エストレーラの攻撃ビルドアップを徹底解剖",date:"2025.06.14 14:20",author:"カルロ=フェリーニ",img:"src/3サッカー攻撃のビルドアップ.png",body:"<p><em>文：カルロ=フェリーニ（戦術アナリスト）</em></p><p>上空から捉えたエストレーラFCのトレーニング映像が話題を呼んでいる。ピッチ全体に配置された選手たちのポジショニングから、モレッティ監督が目指す4-3-3の攻撃ビルドアップの全貌が浮かび上がった。</p><p>映像で確認できるのは、アンカーのフェデリコ=モンテスを起点に、2人のインサイドハーフが左右非対称に開くダイヤモンド型の中盤構成だ。</p><p>この俯瞰視点で最も注目すべきは、DFラインからの縦パスのコースだ。新システムでは、モンテスが一列落ちることでCBからの縦パスの受け手が増え、ビルドアップの選択肢が飛躍的に広がっている。</p><p>直近5試合のポゼッション率は平均62%と、昨季の54%から大幅に改善。フォーメーション図だけでは読み取れない、ピッチ上の「距離感」の最適化によるものだ。</p>"},
+4:{cat:"インタビュー",catClass:"c-interview",title:"マイクの前で決意表明 \u2014 モレッティ監督「グラナーダ戦で必ず勝ち点3を獲る」",date:"2025.06.14 13:50",author:"田中健太",img:"src/4記者会見での真剣な表情.png",body:"<p>逆転勝利から一夜明けた記者会見場。スーツ姿のルイジ=モレッティ監督は、マイクの前で真剣な表情を崩さず、次節アウェイ・グラナーダFC戦への強い決意を語った。</p><p><strong>\u2015\u2015 昨日のヴァルキア戦を振り返って</strong><br>「あの逆転劇は選手たちの精神力の賜物だ。しかし、前半の出来には満足していない。勝って反省できるうちに修正したい。」</p><p><strong>\u2015\u2015 新加入のダリオ=ヴェルデ選手について</strong><br>「今日の練習を見たが、期待以上のクオリティだ。グラナーダ戦でのベンチ入りは十分にあり得る。」</p><p><strong>\u2015\u2015 カンポ=グラナーダでのアウェイ戦に向けて</strong><br>「グラナーダFCは現在リーグ3位の強敵だ。しかし、我々にはアレーナ=エストレーラで培った自信がある。必ず勝ち点3を持ち帰る。」</p>"},
+5:{cat:"スタジアム特集",catClass:"c-data",title:"ライトアップされた聖地 \u2014 アレーナ=エストレーラの夜景と驚異の勝率85%",date:"2025.06.14 12:00",author:"中村翼",img:"src/5サッカーの試合前夜景.png",body:"<p>夜空に浮かび上がるアレーナ=エストレーラ。試合前、照明に照らされた鮮やかなグリーンのピッチは、これから始まるドラマへの期待を否が応でも高める。</p><p>収容人数48,000人のこのスタジアムで、エストレーラFCは今季ホーム戦11勝1分1敗、勝率85%という驚異的な成績を残している。</p><p><strong>夜の観客が生むアドバンテージ</strong><br>ナイトゲームの勝率は92%とデーゲームの78%を大きく上回る。照明に映える赤いユニフォーム、4万人超のサポーターが作り出す雰囲気は、対戦相手にとって最大の脅威だ。</p><p><strong>ピッチコンディション</strong><br>天然芝とハイブリッド芝を組み合わせた最新のサーフェスは、グラウンドキーパーのホルヘ=パディーリャ氏が徹底管理。パス成功率はホーム戦で平均5%高い数値を示している。</p>"},
+6:{cat:"コラム",catClass:"c-tactics",title:"【戦術分析】エストレーラの4-3-3が機能する理由 \u2014 ビルドアップの鍵はモンテスの立ち位置",date:"2025.06.14",author:"カルロ=フェリーニ",img:"src/3サッカー攻撃のビルドアップ.png",body:"<p><em>文：カルロ=フェリーニ（戦術アナリスト）</em></p><p>エストレーラFCの4-3-3が急速に機能し始めている。その最大の要因は、アンカーのフェデリコ=モンテスのポジショニングにある。</p><p>モンテスはビルドアップ時、従来のアンカーよりも1列低い位置に落ちる。これにより事実上の3バックが形成され、両SBが高い位置を取れるようになった。</p><p>攻撃面では、レナト=シルヴァとルカ=アマーリの連携が鍵。シルヴァが中央で起点を作り、アマーリがハーフスペースに飛び出すパターンは、直近5試合で7回のチャンスを生んでいる。</p><p>課題はトランジション時の守備。ヴァルキア戦ではトマス=ブレナンにアンカー脇を使われ先制点を許した。グラナーダ戦では、この弱点をどう克服するかが焦点となる。</p>"},
+7:{cat:"コラム",catClass:"c-data",title:"アレーナ=エストレーラの夜 \u2014 ホームスタジアムが生み出す逆転劇の秘密",date:"2025.06.13",author:"岡本和也",img:"src/5サッカーの試合前夜景.png",body:"<p>エストレーラFCのホーム、アレーナ=エストレーラで今季生まれた逆転勝利は実に6回。その全てがナイトゲームだった。</p><p><strong>後半に強いチーム</strong><br>得点の58%が後半に生まれているエストレーラ。アディショナルタイムでの得点率はプレミアディヴィジョン全体でトップだ。</p><p><strong>サポーターの力</strong><br>平均観客動員42,000人。キャプテンのセルジオ=カンポスは「あの声援の中では疲れを感じない」と語る。</p><p><strong>モレッティ監督の哲学</strong><br>「90分で勝負は決まらない」が口癖のモレッティ監督。最後の1秒まで諦めないメンタリティは、アレーナ=エストレーラの雰囲気があってこそ成り立つ。</p>"},
+8:{cat:"コラム",catClass:"c-transfer",title:"ダリオ=ヴェルデ獲得の舞台裏 \u2014 FCソレイユとの交渉はいかにして実現したか",date:"2025.06.12",author:"高橋直樹",img:"src/2サッカー選手のトレーニングシーン.png",body:"<p>エストレーラFCがFWダリオ=ヴェルデの獲得を発表した。移籍金1500万ユーロという大型補強の舞台裏に迫る。</p><p><strong>交渉のきっかけ</strong><br>モレッティ監督がヴェルデに注目したのは昨年11月。FCソレイユとのリーグ戦で見せた2ゴール1アシストが決め手だった。</p><p><strong>FCソレイユとの駆け引き</strong><br>当初2000万ユーロ以上を要求されたが、ヴェルデ本人の「エストレーラでプレーしたい」という強い希望が交渉を動かした。</p><p><strong>レナトとの2トップへの期待</strong><br>本日のトレーニングでは、青いキットに身を包んだヴェルデがレナト=シルヴァとの連携練習を行った。期待は膨らむばかりだ。</p>"}
 };
 
 function showArticle(id){var a=articles[id];if(!a)return;document.getElementById("home-view").style.display="none";var v=document.getElementById("article-view");v.style.display="block";var bodyHtml=isYouArticle(id)?highlightName(a.body):a.body;v.innerHTML='<button class="back-btn" onclick="showHome()">\u2190 トップに戻る</button><div class="article-detail"><div style="position:relative;display:inline-block;width:100%"><img src="'+a.img+'" alt="" style="height:360px">'+(isYouArticle(id)?'<div class="you-badge-hero">\u2605 YOU</div>':'')+'</div><span class="cat '+a.catClass+'">'+a.cat+'</span><h2>'+a.title+'</h2><div class="meta">'+a.date+' \u00B7 '+a.author+'</div><div class="content">'+bodyHtml+'</div></div>';window.scrollTo(0,0)}
